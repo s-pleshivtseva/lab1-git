@@ -1,0 +1,17 @@
+*.o
+*.obj
+*.exe
+*.out
+*.pdb
+*.idb
+*.ilk
+*.sln
+*.vcxproj*
+build/
+Debug/
+Release/
+x64/
+out/
+.vs/
+*.user
+*.slnx
