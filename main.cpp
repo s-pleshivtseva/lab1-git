@@ -15,6 +15,11 @@ double speed(double s, double t) {
     return s / t;
 }
 
+// Время при равномерном движении
+double travelTime(double s, double v) {
+    return s / v;
+}
+
 // ===== Главная функция: меню =====
 int main() {
     int choice;
@@ -24,6 +29,7 @@ int main() {
         cout << "\n=== Вариант 21: расчёты для равномерного движения ===\n";
         cout << "1. Путь (s = v * t)\n";
         cout << "2. Скорость (v = s / t)\n";
+        cout << "3. Время движения (t = s / v)\n";
         cout << "0. Выход\n";
         cout << "Выберите пункт: ";
         cin >> choice;
@@ -42,6 +48,16 @@ int main() {
             }
             else {
                 cout << "Скорость = " << speed(s, t) << "\n";
+            }
+            break;
+        case 3:
+            cout << "Введите путь s и скорость v: ";
+            cin >> s >> v;
+            if (v == 0) {
+                cout << "Ошибка: скорость не может быть равна нулю.\n";
+            }
+            else {
+                cout << "Время = " << travelTime(s, v) << "\n";
             }
             break;
         case 0:
